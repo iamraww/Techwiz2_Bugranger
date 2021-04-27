@@ -9,7 +9,7 @@
 			<h3 class="m-text5 t-center">
 				@lang('home.newproduct')
 			</h3>
-			<p class="pull-left">Có tất cả {{count($new_product)}} sản phẩm</p>
+			<p class="pull-left">Have everything {{count($new_product)}} product</p>
 		</div>
 
 		<!-- Slide2 -->
@@ -34,7 +34,7 @@
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('addcart',$new->id)}}">
 									<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ
+                                        Add to Basket
 									</button>
 									</a>
 								</div>
@@ -54,7 +54,7 @@
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('addcart',$new->id)}}">
 									<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ
+                                        Add to Basket
 									</button>
 									</a>
 								</div>
@@ -104,7 +104,7 @@
 			<h3 class="m-text5 t-center">
 				@lang('home.saleproduct')
 			</h3>
-			<p class="pull-left">Có tất cả {{count($sale_product)}}  sản phẩm</p>
+			<p class="pull-left">have all{{count($sale_product)}}  products</p>
 		</div>
 
 		<!-- Slide2 -->
@@ -127,7 +127,7 @@
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('addcart',$sale->id)}}">
 									<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ
+                                        Add to Basket
 									</button>
 									</a>
 								</div>
@@ -162,7 +162,7 @@
 			<h3 class="m-text5 t-center">
 				@lang('home.hotproduct')
 			</h3>
-			<p class="pull-left">Có tất cả {{count($hot_product)}}  sản phẩm</p>
+            <p class="pull-left">have all{{count($sale_product)}}  products</p>
 		</div>
 
 		<!-- Slide2 -->
@@ -187,7 +187,7 @@
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('addcart',$hot->id)}}">
 									<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ
+                                        Add to Basket
 									</button>
 									</a>
 								</div>
@@ -207,7 +207,7 @@
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('addcart',$hot->id)}}">
 									<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ
+                                        Add to Basket
 									</button>
 									</a>
 								</div>
@@ -497,31 +497,31 @@
 		<div class="flex-w p-l-15 p-r-15">
 			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
 				<h4 class="m-text12 t-center">
-					Giao hàng miễn phí
+                    Free delivery
 				</h4>
 
 				<a href="#" class="s-text11 t-center">
-					Nhấn để xem chi tiết
+                    Click to see details
 				</a>
 			</div>
 
 			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
 				<h4 class="m-text12 t-center">
-					30 Ngày đổi trả
+                    30 Days to exchange
 				</h4>
 
 				<span class="s-text11 t-center">
-					Hoàn trả lại sản phẩm trong 30 ngày đơn giản.
+					Product returns in 30 days are simple.
 				</span>
 			</div>
 
 			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
 				<h4 class="m-text12 t-center">
-					Ngày mở cửa
+                    Opening day
 				</h4>
 
 				<span class="s-text11 t-center">
-					Cửa hàng mở cửa tất cả các ngày trong tuần
+					The store is open all day of the week
 				</span>
 			</div>
 		</div>
