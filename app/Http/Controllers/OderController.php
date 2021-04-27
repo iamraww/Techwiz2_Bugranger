@@ -33,12 +33,12 @@ class OderController extends Controller
         $email = $oder->user["email"];
         $checkUser= User::where('email',$email)->first();
 
-        Mail::send('admin.email.sendMailOder', array('name'=>$oder->user["name"],'email'=>$oder->user["email"]),function($message) use($checkUser){
-            $message->to($checkUser->email, 'Visitor')->subject('Xác nhận đơn hàng!');
-        });
+//        Mail::send('admin.email.sendMailOder', array('name'=>$oder->user["name"],'email'=>$oder->user["email"]),function($message) use($checkUser){
+//            $message->to($checkUser->email, 'Visitor')->subject('Xác nhận đơn hàng!');
+//        });
 
     	return redirect(route('oder'))
-      	->with(['flash_level'=>'result_msg','flash_massage'=>' Đã xác nhận đơn hàng thành công !']); 
+      	->with(['flash_level'=>'result_msg','flash_massage'=>' Đã xác nhận đơn hàng thành công !']);
     }
 
     public function delete($id){

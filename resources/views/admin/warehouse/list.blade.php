@@ -5,7 +5,7 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Kho hang</li>
+				<li class="active">Warehouse</li>
 			</ol>
 		</div><!--/.row-->
 		<div class="row">
@@ -14,7 +14,7 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-md-10"><div class="form-group">
-								<label for="inputLoai" class="col-sm-3 control-label"><strong> Danh sách sản phẩm </strong></label>
+								<label for="inputLoai" class="col-sm-3 control-label"><strong>List Product</strong></label>
 								<!-- <div class="col-md-6">
 									<select name="sltCate" id="inputLoai" class="form-control">
 														      			<option value="0">- Chọn sản phẩm theo danh mục --</option>
@@ -29,7 +29,7 @@
 									</script>
 								</div> -->
 								<div class="col-md-3">
-									<input type="search" name="txttk" id="inputTxttk" class="form-control" value="" placeholder="Tìm sản phẩm..." required="required" title="">
+									<input type="search" name="txttk" id="inputTxttk" class="form-control" value="" placeholder="Search..." required="required" title="">
 								</div>
 							</div>
 
@@ -63,14 +63,14 @@
 							<table class="table table-hover">
 								<thead>
 									<tr>
-										<th>#</th>
-										<th>Hình ảnh</th>
-										<th>Tên sản phẩm</th>
-										<th>Tóm tắt mô tả</th>
-										<th>Số lượng</th>
-										<th>Giá bán</th>
-										<th>Trạng thái</th>
-										<th>Action</th>
+                                        <th> # </th>
+                                        <th> Image </th>
+                                        <th> Product name </th>
+                                        <th> Summary of description </th>
+                                        <th> Quantity </th>
+                                        <th> Selling price </th>
+                                        <th> Status </th>
+                                        <th> Action </th>
 									</tr>
 								</thead>
 								<tbody>
@@ -84,9 +84,9 @@
 											<td>{{number_format($pr->unit_price)}} USD</td>
 											<td>
 												@if($pr->status !=0)
-													<span style="color:blue;">Còn hàng</span>
+													<span style="color:blue;">Stocking</span>
 												@else
-													Tạm hết hàng
+                                                    Temporarily out of stock
 												@endif
 											</td>
 											<td>

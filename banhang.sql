@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'SupperAdmin', 'huuquynh8@gmail.com', '$2y$10$q3UFgqoa.mt5Yx1dVEBT.ee6CZkLk7p7U4Y.kbYQh6PLJ/mxgenJm', '100', 'ikvwH6gcVJ5eItOJflqUBEYmfIXqRuz4HoD8p1zggM6G55qWbzjQeUEQYPGH', '2020-12-05 00:38:38', '2020-12-05 02:46:22');
+(1, 'SupperAdmin', 'admin@gmail.com', '$2y$10$q3UFgqoa.mt5Yx1dVEBT.ee6CZkLk7p7U4Y.kbYQh6PLJ/mxgenJm', '100', 'ikvwH6gcVJ5eItOJflqUBEYmfIXqRuz4HoD8p1zggM6G55qWbzjQeUEQYPGH', '2020-12-05 00:38:38', '2020-12-05 02:46:22');
 
 -- --------------------------------------------------------
 
@@ -334,9 +334,9 @@ INSERT INTO `products` (`id`, `name`, `id_type`, `description`, `unit_price`, `p
 (39, 'Ducky Year of the Dog RGB Limited Edition Cherry Brown switch', 4, '', 3500, 3300, NULL, '43495_keyboard_ducky_year_of_the_dog_rgb_limited_edition_cherry_brown_switch_0002_2.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (40, 'Ducky Year of the Dog RGB Limited Edition Cherry Brown switch', 4, '', 3500, 3300, NULL, '43495_keyboard_ducky_year_of_the_dog_rgb_limited_edition_cherry_brown_switch_0002_2.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (41, 'Filco Majestouch Convertible 2 Shibuki Red', 4, 'Filco Majestouch Convertible 2 Shibuki Red', 3500, 3300, NULL, '41097_keyboard_filco_majestouch_convertible_2_shibuki_red_red_switch_104_0001_1.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
-(42, 'RAM DDR4 HP 32GB DDR4-2666 (1x32GB)', 6, 'Thịt bò xay, ngô, sốt BBQ, phô mai mozzarella', 1500, 1300, NULL, '50013_hp_32gb_ddr4_2666__1x32gb__ecc_reg_ram__1xd86aa_.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
+(42, 'RAM DDR4 HP 32GB DDR4-2666 (1x32GB)', 6, 'Thịt bò xay, ngô, sốt BBQ, phô mai mozzarella', 1500, 1300, NULL, '50013_hp_32gb_ddr4_2666__1x32gb__ecc_reg_ram__1xd86aa_.png', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (43, 'RAM Desktop Gskill Trident Z RGB (F4-3200C16D-64GTZR) 64GB (2x32GB)', 6, 'RAM Desktop Gskill Trident Z RGB (F4-3200C16D-64GTZR) 64GB (2x32GB)', 1200, 0, NULL, '54204_ram_desktop_gskill_trident_z_rgb__f4_3200c16d_64gtzr__64gb__2x32gb__ddr4_3200mhz_4.jpg', '', 0, 1, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
-(44, 'RAM DDR4 HP 32GB DDR4-2666 (1x32GB)', 6, 'Filco Majestouch Convertible 2 Shibuki Red.', 1200, 0, NULL, 'c50013_hp_32gb_ddr4_2666__1x32gb__ecc_reg_ram__1xd86aa_.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
+(44, 'RAM DDR4 HP 32GB DDR4-2666 (1x32GB)', 6, 'Filco Majestouch Convertible 2 Shibuki Red.', 1200, 0, NULL, 'c50013_hp_32gb_ddr4_2666__1x32gb__ecc_reg_ram__1xd86aa_.png', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (45, 'RAM Desktop Gskill Trident Z RGB (F4-3200C16D-64GTZR) 64GB (2x32GB)', 6, 'RAM Desktop Gskill Trident Z RGB (F4-3200C16D-64GTZR) 64GB (2x32GB)', 1200, 0, NULL, '54204_ram_desktop_gskill_trident_z_rgb__f4_3200c16d_64gtzr__64gb__2x32gb__ddr4_3200mhz_4.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (46, 'Ram Desktop Gskill Trident Z Neo RGB (F4-3600C18D-64GTZN) 64GB (2x32GB)', 6, 'Ram Desktop Gskill Trident Z Neo RGB (F4-3600C18D-64GTZN) 64GB (2x32GB)', 1200, 0, NULL, '54204_ram_desktop_gskill_trident_z_rgb__f4_3200c16d_64gtzr__64gb__2x32gb__ddr4_3200mhz_4 (1).jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
 (47, 'Ram Desktop Corsair Vengeance RGB (CMW64GX4M2E3200C16) 64GB (2x32GB) ', 6, 'Ram Desktop Corsair Vengeance RGB (CMW64GX4M2E3200C16) 64GB (2x32GB) .', 1400, 0, NULL, '55011_ram_desktop_corsair_vengeance_rgb__cmw64gx4m2e3200c16__64gb__2x32gb__ddr4_3200mhz__3_.jpg', '', 0, 0, 0, '2020-10-13 02:20:00', '2020-10-19 03:20:00'),
@@ -417,7 +417,7 @@ INSERT INTO `type_products` (`id`, `name`, `description`, `image`, `created_at`,
 (3, 'Mouse', 'Mouse', 'imgg', '2020-04-26 00:33:33', '2020-04-26 07:25:27'),
 (4, 'KeyBoard', 'KeyBoard', 'imgg', '2020-04-26 03:29:19', '2020-04-26 02:22:22'),
 (5, 'HeadPhone', 'HeadPhone', 'imgg', '2020-04-26 04:00:00', '2020-04-26 04:00:23'),
-(6, 'Gmae Machine', 'Gmae Machine', 'pizza', '2020-04-26 17:19:00', NULL),
+(6, 'Game Machine', 'Gmae Machine', 'pizza', '2020-04-26 17:19:00', NULL),
 (7, 'Other', 'A.', 'sukemdau.jpg', '2020-04-26 17:19:00', NULL);
 
 -- --------------------------------------------------------

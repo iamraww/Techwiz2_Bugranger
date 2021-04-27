@@ -3,17 +3,17 @@
 	<!-- breadcrumb -->
 	<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
 		<a href="index.html" class="s-text16">
-			Trang chủ
+			Home
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
 		<a href="product.html" class="s-text16">
-			Cửa hàng
+			Shop
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
 		<a href="#" class="s-text16">
-			Bánh Ngọt
+			Product
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
@@ -30,13 +30,13 @@
 					<div class="wrap-slick3-dots"></div>
 
 					<div class="slick3">
-						
+
 						<div class="item-slick3" data-thumb="frontend/image/product/{{$productdetail->image}}">
 							<div class="wrap-pic-w">
 								<img src="frontend/image/product/{{$productdetail->image}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -67,28 +67,28 @@
 				<div class="p-t-33 p-b-60">
 					<div class="flex-m flex-w p-b-10">
 						<div class="s-text15 w-size15 t-center">
-							Kích cỡ
+							Select
 						</div>
 
 						<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
 							<select class="selection-2" name="size">
-								<option>Chọn</option>
-								<option>Size S</option>
-								<option>Size M</option>
-								<option>Size L</option>
-								<option>Size XL</option>
+								<option>Select</option>
+								<option>Select</option>
+								<option>Select</option>
+								<option>Select</option>
+								<option>Select</option>
 							</select>
 						</div>
 					</div>
 
 					<div class="flex-m flex-w">
 						<div class="s-text15 w-size15 t-center">
-							Màu sắc
+							Color
 						</div>
 
 						<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
 							<select class="selection-2" name="color">
-								<option>Chọn</option>
+								<option>Select</option>
 								<option>Gray</option>
 								<option>Red</option>
 								<option>Black</option>
@@ -115,7 +115,7 @@
 								<!-- Button -->
 								<a style="text-decoration: none" href="{{route('addcart',$productdetail->id)}}">
 									<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-										Thêm vào giỏ 
+										Add to cart
 									</button>
 								</a>
 							</div>
@@ -124,14 +124,14 @@
 				</div>
 
 				<div class="p-b-45">
-					<span class="s-text8 m-r-35">mã sản phẩm: MUG-01</span>
-					<span class="s-text8">Danh mục: </span>
+					<span class="s-text8 m-r-35">Product ID: MUG-01</span>
+					<span class="s-text8">Category: </span>
 				</div>
 
 				<!--  -->
 				<div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
 					<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-						Mô tả sản phẩm
+                        Product Description
 						<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
 						<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
 					</h5>
@@ -145,7 +145,7 @@
 
 				<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
 					<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-						Thông tin thêm
+                        More information
 						<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
 						<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
 					</h5>
@@ -160,14 +160,14 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container">
 		<div class="row bootstrap snippets">
 			<div class="col-md-6 col-md-offset-2 col-sm-12">
 				<div class="comment-wrapper">
 					<div class="panel panel-info">
 						@if(Auth::check())
-						
+
 						<form action="comment/{{$productdetail->id}}" method="POST" class="form-horizontal" role="form">
 							@csrf
 							@if(Session::has('success'))
@@ -176,12 +176,12 @@
 								</div>
 							@endif
 							<div class="panel-heading">
-								Viết bình luận tại đây
+                                Write a comment here
 							</div>
 							<div class="panel-body">
 								<textarea name="content" class="form-control" placeholder="write a comment..." rows="3"></textarea>
 								<br>
-								<button type="submit" class="btn btn-info pull-right">Gửi</button>
+								<button type="submit" class="btn btn-info pull-right">Send</button>
 								<div class="clearfix"></div>
 								<hr>
 								@endif
@@ -194,7 +194,7 @@
 										</a>
 										<div class="media-body">
 											<span class="text-muted pull-right">
-												<small class="text-muted">30 min ago</small>
+												<small class="text-muted">1 min ago</small>
 											</span>
 											<strong class="text-success">{{$cm->user->name}}</strong>
 											<p>
@@ -207,20 +207,20 @@
 								</ul>
 							</div>
 						</form>
-						
+
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Relate Product -->
 	<section class="relateproduct bgwhite p-t-45 p-b-138">
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center">
-					Sản phẩm liên quan
+                    Related products
 				</h3>
 			</div>
 
@@ -245,7 +245,7 @@
 										<!-- Button -->
 										<a style="text-decoration: none" href="{{route('addcart',$rela->id)}}">
 											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Thêm vào giỏ
+												Add to cart
 											</button>
 										</a>
 									</div>
@@ -265,7 +265,7 @@
 										<!-- Button -->
 										<a style="text-decoration: none" href="{{route('addcart',$rela->id)}}">
 											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Thêm vào giỏ
+												Add to cart
 											</button>
 										</a>
 									</div>
@@ -285,7 +285,7 @@
 										<!-- Button -->
 										<a style="text-decoration: none" href="{{route('addcart',$rela->id)}}">
 											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Thêm vào giỏ
+                                                Add to cart
 											</button>
 										</a>
 									</div>
@@ -318,6 +318,6 @@
 
 		</div>
 	</section>
-	
+
 
 @endsection

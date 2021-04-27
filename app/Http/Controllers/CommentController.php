@@ -17,7 +17,7 @@ class CommentController extends Controller
     	$comment->id_Product=$productdetail;
     	$comment->id_User= Auth::user()->id;
     	$comment->content=$req->content;
-    	$comment->date_comment=date('Y-m-d');
+    	$comment->date_comment=date( 'Y-m-d');
     	$comment->save();
     	return redirect()->back()->with('success','Comment success');
     }

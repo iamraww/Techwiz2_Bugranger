@@ -95,7 +95,8 @@
 											</td>
 										</tr>
 									@endforeach
-								</tbody>
+								</tbody>P
+
 
 							</table>
 							<div class="row">{{$product->links()}}</div>

@@ -4,7 +4,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(frontend/images/heading-pages-01.jpg);">
 		<h2 class="l-text2 t-center">
-			Giỏ hàng
+			Cart
 		</h2>
 	</section>
 
@@ -16,12 +16,12 @@
 				<div class="wrap-table-shopping-cart bgwhite">
 					<table class="table-shopping-cart">
 						<tr class="table-head">
-							<th class="column-1">hình ảnh</th>
-							<th class="column-2">Sản phẩm</th>
-							<th class="column-3">Giá</th>
-							<th class="column-4 p-l-70">Số Lượng</th>
-							<th class="column-5">Tổng tiền</th>
-							<th class="column-4">Thao tác</th>
+							<th class="column-1">Picture</th>
+							<th class="column-2">Product</th>
+							<th class="column-3">price</th>
+							<th class="column-4 p-l-70">Amount</th>
+                                <th class="column-5">Total money</th>
+							<th class="column-4">Manipulation</th>
 						</tr>
 						@foreach($products as $key=> $pr)
 
@@ -60,8 +60,8 @@
 								</span>
 							</td>
 							<td class="column-2">
-								<a href=""> <i class="fa fa-pencil"></i> Sửa</a>
-								<a href="{{route('deletecart',$key)}}"> <i class="fa fa-trash-o"></i> Xóa</a>
+								<a href=""> <i class="fa fa-pencil"></i> Repair</a>
+								<a href="{{route('deletecart',$key)}}"> <i class="fa fa-trash-o"></i> Delete</a>
 
 							</td>
 						</tr>
@@ -74,13 +74,13 @@
 			<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
 				<div class="flex-w flex-m w-full-sm">
 					<div class="size11 bo4 m-r-10">
-						<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="coupon-code" placeholder="Nhập mã code">
+						<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="coupon-code" placeholder="Enter the code">
 					</div>
 
 					<div class="size12 trans-0-4 m-t-10 m-b-10 m-r-10">
 						<!-- Button -->
 						<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-							Mã giảm giá
+                            Discount code
 						</button>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 				<div class="size10 trans-0-4 m-t-10 m-b-10">
 					<!-- Button -->
 					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-						Cập nhật giỏ hàng
+                        Update cart
 					</button>
 				</div>
 			</div>
@@ -96,7 +96,7 @@
 			<!-- Total -->
 			<div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
 				<h5 class="m-text20 p-b-24">
-					Tổng giỏ hàng
+                    Total cart
 				</h5>
 
 				<!--  -->
@@ -164,7 +164,7 @@
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-					<a href="{{route('checkout')}}" class="btn flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Tiến hành thanh toán</a>
+					<a href="{{route('checkout')}}" class="btn flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Proceed with payment</a>
 				</div>
 			</div>
 		</div>

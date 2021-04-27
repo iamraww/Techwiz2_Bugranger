@@ -6,7 +6,7 @@
 
 			<div class="pull-left">
 				<div class="beta-breadcrumb">
-					<a href="{{route('home')}}">Trang chủ</a> / <span>Đặt hàng</span>
+					<a href="{{route('home')}}">Home Page</a> / <span>Order</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -30,17 +30,17 @@
 				@csrf
 				<div class="row">
 					<div class="col-sm-6">
-						<h4>Đặt hàng</h4>
+						<h4>Order</h4>
 						<div class="space20">&nbsp;</div>
 
 						<div class="form-block">
-							<label for="name">Họ tên*</label>
-							<input type="text" name="fullname" id="name" placeholder="Họ tên" required value="{{get_data_user('web','name')}}">
+							<label for="name">Full Name*</label>
+							<input type="text" name="fullname" id="name" placeholder="fullname" required value="{{get_data_user('web','name')}}">
 						</div>
 						<div class="form-block">
-							<label>Giới tính </label>
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nam" checked="checked" style="width: 10%"><span style="margin-right: 10%">Nam</span>
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" style="width: 10%"><span>Nữ</span>
+							<label>Gender </label>
+							<input id="gender" type="radio" class="input-radio" name="gender" value="nam" checked="checked" style="width: 10%"><span style="margin-right: 10%">male</span>
+							<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" style="width: 10%"><span>Female</span>
 
 						</div>
 
@@ -50,24 +50,24 @@
 						</div>
 
 						<div class="form-block">
-							<label for="adress">Địa chỉ*</label>
-							<input type="text" name="address" id="adress"value="{{get_data_user('web','address')}}"  placeholder="Địa Chỉ" required>
+							<label for="adress">Address*</label>
+							<input type="text" name="address" id="adress"value="{{get_data_user('web','address')}}"  placeholder="address" required>
 						</div>
 
 
 						<div class="form-block">
-							<label for="phone">Điện thoại*</label>
-							<input type="text" value="{{get_data_user('web','phone')}}" name="phone" id="phone" required placeholder="Số điện thoại">
+							<label for="phone">Phone*</label>
+							<input type="text" value="{{get_data_user('web','phone')}}" name="phone" id="phone" required placeholder="Phone">
 						</div>
 
 						<div class="form-block">
-							<label for="notes">Ghi chú</label>
-							<textarea id="notes" name="notes" placeholder="Nhập..."></textarea>
+							<label for="notes">Notes</label>
+							<textarea id="notes" name="notes" placeholder="Import..."></textarea>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="your-order">
-							<div class="your-order-head"><h5>Đơn hàng của bạn</h5></div>
+							<div class="your-order-head"><h5>Your order</h5></div>
 							<div class="your-order-body" style="padding: 0px 10px">
 								<!-- {{dump(get_data_user('web','name'))}} -->
 								<div class="your-order-item">
@@ -81,7 +81,7 @@
 											<div class="media-body">
 												<p class="font-large">{{$pr->name}}</p>
 												<span class="color-gray your-order-info">Color: Red</span>
-												<span class="color-gray your-order-info">Số lượng: {{$pr->qty}}</span>
+												<span class="color-gray your-order-info">Amount: {{$pr->qty}}</span>
 											</div>
 										</div>
 
@@ -91,38 +91,38 @@
 									@endforeach
 								</div>
 								<div class="your-order-item">
-									<div class="pull-left"><p class="your-order-f18">Tổng tiền:</p></div>
+									<div class="pull-left"><p class="your-order-f18">Total money:</p></div>
 									<div class="pull-right"><h5 class="color-black">{{Cart::subtotal()}}</h5></div>
 									<div class="clearfix"></div>
 								</div>
 							</div>
-							<div class="your-order-head"><h5>Hình thức thanh toán</h5></div>
+							<div class="your-order-head"><h5>Payments</h5></div>
 
 							<div class="your-order-body">
 								<ul class="payment_methods methods">
 									<li class="payment_method_bacs">
 										<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
-										<label for="payment_method_bacs">Thanh toán khi nhận hàng </label>
+										<label for="payment_method_bacs">Payment on delivery </label>
 										<div class="payment_box payment_method_bacs" style="display: block;">
-											Cửa hàng sẽ gửi hàng đến địa chỉ của bạn, bạn xem hàng rồi thanh toán tiền cho nhân viên giao hàng
+                                            The store will send the goods to your address, you check the goods and pay the delivery staff
 										</div>
 									</li>
 
 									<li class="payment_method_cheque">
 										<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
-										<label for="payment_method_cheque">Chuyển khoản </label>
+										<label for="payment_method_cheque">Transfer </label>
 										<div class="payment_box payment_method_cheque" style="display: none;">
-											Chuyển tiền đến tài khoản sau:
-											<br>- Số tài khoản: 711AC0334673
-											<br>- Chủ TK: BÀN HỮU QUỲNH
-											<br>- Ngân hàng VTB, Chi nhánh Thủ Dầu Một
+                                            Transfer money to the following account:
+											<br>- Account number: 100868352899.
+											<br>- Account bank: TRAN ANH DUC.
+											<br>- Vietinbank.
 										</div>
 									</li>
 
 								</ul>
 							</div>
 
-							<div class="text-center"><button type="submit" class="beta-btn primary" href="#" >Đặt hàng <i class="fa fa-chevron-right"></i></button>
+							<div class="text-center"><button type="submit" class="beta-btn primary" href="#" >Order <i class="fa fa-chevron-right"></i></button>
 						</div> <!-- .your-order -->
 					</div>
 				</div>

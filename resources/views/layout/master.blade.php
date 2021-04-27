@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{app()->getLocale()}}">
 <head>
-	<title>BAKERY</title>
+	<title>BUGRANGER</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -51,9 +51,9 @@
 	<!-- Header -->
 	@include('layout.header')
 	<!-- Slide1 -->
-	
+
 	<!-- New Product -->
-	
+
 	@yield('content')
 	<!-- Footer -->
 	@include('layout.footer')
@@ -109,20 +109,20 @@
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "Đã thêm vào giỏ hàng !", "success");
+				swal(nameProduct, "Added to cart !", "success");
 			});
 		});
-	
+
 		$('.block2-btn-addwishlist').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "Đã thêm vào yêu thích !", "success");
+				swal(nameProduct, "Added to favorites !", "success");
 			});
 		});
 		$('.btn-addcart-product-detail').each(function(){
 			var nameProduct = $('.product-detail-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "Đã thêm vào giỏ hàng !", "success");
+				swal(nameProduct, "Added to cart !", "success");
 			});
 		});
 	</script>

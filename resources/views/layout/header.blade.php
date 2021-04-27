@@ -36,7 +36,6 @@
 						<ul class="main_menu">
 							<li>
 								<a href="{{route('home')}}">@lang('home.home_menu')</a>
-
 							</li>
 
 							<li>
@@ -136,14 +135,14 @@
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('listcart')}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Xem giỏ hàng
+										Check card
 									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('checkout')}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Thanh toán
+                                        Pay
 									</a>
 								</div>
 							</div>
@@ -270,7 +269,7 @@
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 						<div class="topbar-child2-mobile">
 							<span class="topbar-email">
-								fashe@example.com
+								bugranger@fpt.edu.vn
 							</span>
 
 							<div class="topbar-language rs1-select2">

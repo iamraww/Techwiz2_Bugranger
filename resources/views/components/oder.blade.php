@@ -3,12 +3,12 @@
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th>Hình ảnh</th>
-			<th>Tên sản phẩm</th>
-			<th>Giá bán</th>
-			<th> Số lượng </th>
-			<th>Thành tiền</th>
-			<th>Thao tác</th>
+			<th>Image</th>
+			<th>Name product</th>
+			<th>Price</th>
+			<th>Amount</th>
+			<th>Total price</th>
+			<th>Action</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,7 +22,7 @@
 			<td> </td>
 			<td> USD</td>
 			<td>
-				<a href=""  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
+				<a href=""  title="Xóa" onclick="return xacnhan('Delete category ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 			</td>
 		</tr>
 		@endforeach

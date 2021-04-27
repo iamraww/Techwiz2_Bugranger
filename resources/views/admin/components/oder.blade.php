@@ -3,12 +3,12 @@
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th>Hình ảnh</th>
-			<th>Tên sản phẩm</th>
-			<th>Giá bán</th>
-			<th> Số lượng </th>
-			<th>Thành tiền</th>
-			<th>Thao tác</th>
+			<th>Image</th>
+			<th>Name product</th>
+			<th>Price</th>
+			<th>Amount</th>
+			<th>Total price</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>

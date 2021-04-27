@@ -28,7 +28,7 @@ class ProductController extends Controller
     			'name'=>'min:3'
     		],
     		[
-    			'name.min'=>'Tên sản phẩm không được nhỏ hơn 3 ký tự'
+    			'name.min'=>'Product name must not be less than 3 characters'
     		]);
 
     	$product->name= $req->name;

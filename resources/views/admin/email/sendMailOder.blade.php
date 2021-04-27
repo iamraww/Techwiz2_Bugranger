@@ -1,1 +1,2 @@
-<p>Cảm ơn bạn đã tin dùng các sản phẩm của chúng tôi . Đơn hàng của bạn đã được xử lí ! Tổng đài viên sẽ gọi điện cho bạn để xác thực thông tin trước khi giao hàng trong 30 phút nữa!</p>
+<p>Thank you for your trust in our products.
+    Your order has been processed! The operator will call you to verify information before delivery in 30 minutes!</p>

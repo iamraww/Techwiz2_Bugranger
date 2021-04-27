@@ -2,13 +2,13 @@
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					Liên hệ
+					Contact
 				</h4>
 
 				<div>
 					<p class="s-text7 w-size27">
-						Nếu bạn có bất kì câu hỏi nào về sản phẩm ? Vui lòng đến trực tiếp cửa hàng của chúng tôi tại địa chỉ T31/2 Khu phố bình thuận 2 - Thuận An - Bình Dương hoặc gọi cho chúng tôi qua số điện thoại 0398586505
-					</p>
+                        If you have any questions about the product? Please come directly to our store at 8 Ton That Thuyet - Hanoi or call us on phone number 0987654321
+                    </p>
 
 					<div class="flex-m p-t-30">
 						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
@@ -22,31 +22,31 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Danh mục
+                    Category
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Men
+                        <a href="/shop/1" class="s-text7">
+							Laptop
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Women
+						<a href="/shop/2" class="s-text7">
+							CPU
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Dresses
+						<a href="/shop/3" class="s-text7">
+							Mouse
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sunglasses
+						<a href="/shop/4" class="s-text7">
+							KeyBoard
 						</a>
 					</li>
 				</ul>
@@ -54,7 +54,7 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Liên kết
+					URL
 				</h4>
 
 				<ul>
@@ -86,7 +86,7 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Giúp đỡ
+					Help
 				</h4>
 
 				<ul>
@@ -118,7 +118,7 @@
 
 			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					Nhận thông tin từ chúng tôi
+                    Receive information from us
 				</h4>
 
 				<form>
@@ -130,7 +130,7 @@
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
 						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Đăng ký
+							Register
 						</button>
 					</div>
 
@@ -160,7 +160,7 @@
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2019 All rights reserved. | Trang web được phát triển bởi <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/H.QuynhIT97" target="_blank">Hữu Quỳnh Dev</a>
+				Copyright © 2019 All rights reserved. <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/groups/SVFAIHaNoi/permalink/4047302011994845/?comment_id=4047690585289321" target="_blank">FPT Bugranger</a>
 			</div>
 		</div>
 	</footer>

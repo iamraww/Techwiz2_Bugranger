@@ -3,7 +3,7 @@
 
 		<form role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Tìm kiếm ...">
+				<input type="text" class="form-control" placeholder="Search ...">
 			</div>
 		</form>
 		<ul class="nav" id="side-menu">
