@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
 <!-- main content - noi dung chinh trong chu -->
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
@@ -18,13 +18,13 @@
 								<div class="col-md-6">
 									<select name="sltCate" id="inputLoai" class="form-control">
 						      			<option value="0">- Chọn sản phẩm theo danh mục --</option>
-						      					
+
 						      		</select>
 									<script>
 									    document.getElementById("inputLoai").onchange = function() {
 									        if (this.selectedIndex!==0) {
 									            window.location.href = this.value;
-									        }        
+									        }
 									    };
 									</script>
 								</div>
@@ -32,16 +32,16 @@
 									<input type="search" name="txttk" id="inputTxttk" class="form-control" value="" placeholder="Tìm sản phẩm..." required="required" title="">
 								</div>
 							</div>
-								
-								
+
+
 							</div>
 							<div class="col-md-2">
-								
+
 									<a href="{{route('add.product')}}" title=""><button type="button" class="btn btn-primary pull-right">Thêm Mới Sản Phẩm</button></a>
-								
+
 							</div>
-						</div> 
-						
+						</div>
+
 					</div>
 					@if (count($errors) > 0)
 					    <div class="alert alert-danger">
@@ -54,7 +54,7 @@
 					    @elseif (Session()->has('success'))
 					    	<div class="alert alert-success">
 						        <ul>
-						            {!! Session::get('success') !!}	
+						            {!! Session::get('success') !!}
 						        </ul>
 						    </div>
 						@endif
@@ -62,8 +62,8 @@
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead>
-									<tr>										
-										<th>#</th>										
+									<tr>
+										<th>#</th>
 										<th>Hình ảnh</th>
 										<th>Tên sản phẩm</th>
 										<th>Tóm tắt chức năng</th>
@@ -81,7 +81,7 @@
 											<td>{{$pr->name}}</td>
 											<td>{{$pr->description}}</td>
 											<td></td>
-											<td>{{number_format($pr->unit_price)}} VNĐ</td>
+											<td>{{number_format($pr->unit_price)}} USD</td>
 											<td>
 												@if($pr->status !=0)
 													<span style="color:blue;">Còn hàng</span>
@@ -94,7 +94,7 @@
 											    <a href="{{route('delete.product',$pr->id)}}"  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 											</td>
 										</tr>
-									@endforeach							
+									@endforeach
 								</tbody>
 
 							</table>
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->		
+		</div><!--/.row-->
 	</div>	<!--/.main-->
 <!-- =====================================main content - noi dung chinh trong chu -->
 @endsection

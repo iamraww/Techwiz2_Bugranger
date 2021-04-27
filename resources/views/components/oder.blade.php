@@ -1,8 +1,8 @@
 @if($oders)
 <table class="table table-hover">
 	<thead>
-		<tr>										
-			<th>ID</th>										
+		<tr>
+			<th>ID</th>
 			<th>Hình ảnh</th>
 			<th>Tên sản phẩm</th>
 			<th>Giá bán</th>
@@ -20,13 +20,13 @@
 			<td>{!!$oder->name!!}</td>
 			<td></td>
 			<td> </td>
-			<td> Vnđ</td>
+			<td> USD</td>
 			<td>
 				<a href=""  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 			</td>
 		</tr>
-		@endforeach				
-					
+		@endforeach
+
 	</tbody>
 </table>
 @endif

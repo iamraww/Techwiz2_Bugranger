@@ -5,7 +5,7 @@
 			<div class="item-slick1 item1-slick1" style="background-image: url(frontend/image/slide/{{$sl->image}});">
 				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 					<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-						BAKERY SHOP 2019
+						BUGRANGER SHOP 2019
 					</span>
 
 					<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
@@ -19,7 +19,7 @@
 						</a>
 					</div>
 				</div>
-			</div>				
+			</div>
 			@endforeach
 		</div>
 	</div>

@@ -24,18 +24,18 @@
 							<th class="column-4">Thao tác</th>
 						</tr>
 						@foreach($products as $key=> $pr)
-						
+
 						<tr class="table-row">
 							<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
 									<img src="frontend/image/product/{{$pr->options->image}}" alt="IMG-PRODUCT">
 								</div>
-							</td>	
+							</td>
 							<td class="column-2">{{$pr ->name}}</td>
 							@if($pr->options->sale !=0)
-							<td class="column-3">{{number_format($pr->options->sale)}} VNĐ</td>
+							<td class="column-3">{{number_format($pr->options->sale)}} USD</td>
 							@else
-							<td class="column-3">{{number_format($pr->price)}} VNĐ</td>
+							<td class="column-3">{{number_format($pr->price)}} USD</td>
 							@endif
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
@@ -53,19 +53,19 @@
 							<td class="column-5">
 								<span>
 									@if($pr->options->sale !=0)
-									{{number_format($pr->options->sale*$pr->qty)}} VNĐ
+									{{number_format($pr->options->sale*$pr->qty)}} USD
 									@else
-									{{number_format($pr->price*$pr->qty)}} VNĐ
+									{{number_format($pr->price*$pr->qty)}} USD
 									@endif
 								</span>
 							</td>
 							<td class="column-2">
 								<a href=""> <i class="fa fa-pencil"></i> Sửa</a>
 								<a href="{{route('deletecart',$key)}}"> <i class="fa fa-trash-o"></i> Xóa</a>
-								
+
 							</td>
-						</tr>			
-						@endforeach			
+						</tr>
+						@endforeach
 					</table>
 
 				</div>
@@ -104,7 +104,7 @@
 					<span class="s-text18 w-size19 w-full-sm">
 						Tổng giá:
 					</span>
-				
+
 					<span class="m-text21 w-size20 w-full-sm">
 						$39.00
 					</span>
@@ -115,16 +115,16 @@
 					<span class="s-text18 w-size19 w-full-sm">
 						Vận chuyển:
 					</span>
-				
+
 					<div class="w-size20 w-full-sm">
 						<p class="s-text8 p-b-23">
 							There are no shipping methods available. Please double check your address, or contact us if you need any help.
 						</p>
-				
+
 						<span class="s-text19">
 							Calculate Shipping
 						</span>
-				
+
 						<div class="rs2-select2 rs3-select2 rs4-select2 bo4 of-hidden w-size21 m-t-8 m-b-12">
 							<select class="selection-2" name="country">
 								<option>Select a country...</option>
@@ -133,15 +133,15 @@
 								<option>Japan</option>
 							</select>
 						</div>
-				
+
 						<div class="size13 bo4 m-b-12">
 						<input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="state" placeholder="State /  country">
 						</div>
-				
+
 						<div class="size13 bo4 m-b-22">
 							<input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="postcode" placeholder="Postcode / Zip">
 						</div>
-				
+
 						<div class="size14 trans-0-4 m-b-10">
 							Button
 							<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
@@ -158,7 +158,7 @@
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						{{Cart::subtotal()}} VNĐ
+						{{Cart::subtotal()}} USD
 					</span>
 				</div>
 

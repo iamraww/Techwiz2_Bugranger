@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
 <!-- main content - noi dung chinh trong chu -->
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
@@ -11,9 +11,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel-heading">
-					Danh sách đơn đặt hàng						
+					Danh sách đơn đặt hàng
 				</div>
-				<div class="panel panel-default">					
+				<div class="panel panel-default">
 					@if (count($errors) > 0)
 					    <div class="alert alert-danger">
 					        <ul>
@@ -25,7 +25,7 @@
 					    @elseif (Session()->has('flash_level'))
 					    	<div class="alert alert-success">
 						        <ul>
-						            {!! Session::get('flash_massage') !!}	
+						            {!! Session::get('flash_massage') !!}
 						        </ul>
 						    </div>
 						@endif
@@ -33,12 +33,12 @@
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead>
-									<tr>										
-										<th>#</th>										
+									<tr>
+										<th>#</th>
 										<th>Tên khách hàng</th>
 										<th>Địa chỉ giao hàng</th>
 										<th>Điện thoại</th>
-										<th>Email</th>										
+										<th>Email</th>
 										<th>Ngày đặt</th>
 										<th>Thành tiền</th>
 										<th>Trạng thái</th>
@@ -53,9 +53,9 @@
 											<td>{{$oder->user->name}}</td>
 											<td>{{$oder->user->address}}</td>
 											<td>{{$oder->user->phone}}</td>
-											<td>{{$oder->user->email}}</td>											
+											<td>{{$oder->user->email}}</td>
 											<td>{{$oder->date_order}}</td>
-											<td>{{number_format($oder->total)}} VNĐ</td>
+											<td>{{number_format($oder->total)}} USD</td>
 											<td>
 												@if($oder->status ==0)
 													<span style="color:#d35400;">Chưa xác nhận</span>
@@ -69,18 +69,18 @@
 											</td>
 										</tr>
 									@endforeach
-																	
+
 								</tbody>
 							</table>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->		
+		</div><!--/.row-->
 	</div>	<!--/.main-->
 
-	
+
 	<div class="modal fade" id="modalOder">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -89,7 +89,7 @@
 					<h4 class="modal-title">Chi tiết đơn hàng #<b class="oder_id"></b></h4>
 				</div>
 				<div class="modal-body" id="md_content">
-					
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

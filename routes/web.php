@@ -11,7 +11,7 @@
 |
 */
 Route::get('home2', 'HomeController@testLang' );
-Route::get('trang-chu','PageController@getIndex');
+Route::get('/','PageController@getIndex');
 
 
 Route::get('locale/{locale?}',function($locale){

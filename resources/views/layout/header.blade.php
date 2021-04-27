@@ -118,9 +118,9 @@
 										</span>
 										<span class="header-cart-item-info">
 											Giá :@if($pr->options->sale !=0)
-													{{number_format($pr->options->sale)}} VNĐ
+													{{number_format($pr->options->sale)}} USD
 												 @else
-													{{number_format($pr->price)}} VNĐ
+													{{number_format($pr->price)}} USD
 												 @endif
 										</span>
 									</div>
@@ -129,7 +129,7 @@
 							</ul>
 
 							<div class="header-cart-total">
-								{{Cart::subtotal()}} VNĐ
+								{{Cart::subtotal()}} USD
 							</div>
 
 							<div class="header-cart-buttons">
