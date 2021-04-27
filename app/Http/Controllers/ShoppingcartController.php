@@ -17,7 +17,7 @@ class ShoppingcartController extends Controller
     public function addProduct(Request $req,$id){
     	$product=Product::select('name','id','unit_price','promotion_price','image')->find($id);
 
-    	if(!$product) return redirect(route('trangchu'));
+    	if(!$product) return redirect(route('home'));
 
         /*$price = $product->unit_price;
         if ($product->promotion_price) {

@@ -35,7 +35,7 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="{{route('trangchu')}}">@lang('home.home_menu')</a>
+								<a href="{{route('home')}}">@lang('home.home_menu')</a>
 
 							</li>
 

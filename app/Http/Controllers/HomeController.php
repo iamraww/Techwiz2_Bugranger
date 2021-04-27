@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect(route('trangchu'));
+        return redirect(route('home'));
     }
 
     public function testLang(){

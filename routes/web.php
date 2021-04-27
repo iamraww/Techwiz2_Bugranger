@@ -23,23 +23,23 @@ Route::get('auth/facebook', 'FacebookAuthController@redirectToProvider')->name('
 Route::get('auth/facebook/callback', 'FacebookAuthController@handleProviderCallback');
  /*...*/
 
-Route::get('trang-chu','PageController@getIndex')->name('trangchu');
-Route::get('cua-hang/{type?}','PageController@getProduct')->name('store');
-Route::get('chi-tiet-san-pham/{id?}','PageController@getProductdetail')->name('productdetail');
-Route::get('lien-he','ContactController@getContact')->name('contact');
-Route::post('lien-he','ContactController@postContact');
-Route::get('gioi-thieu','PageController@getAbout')->name('about');
-Route::get('gio-hang','PageController@getCart');
+Route::get('home','PageController@getIndex')->name('home'); /* home , home */
+Route::get('shop/{type?}','PageController@getProduct')->name('store'); /* cua-hang */
+Route::get('detail/{id?}','PageController@getProductdetail')->name('productdetail');/*chi-tiet-san-pham */
+Route::get('contact','ContactController@getContact')->name('contact'); /* lien-he */
+Route::post('contact','ContactController@postContact'); /* lien-he */
+Route::get('about','PageController@getAbout')->name('about'); /*  gioi-thieu */
+Route::get('cart','PageController@getCart');  // gio-hang
 Route::get('admin','AdminController@getAdmin')->name('admin');
 
-/*Route quản trị Admin*/
+/*Route  Admin*/
 Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function(){
-	Route::get('danhmuc','CategoryController@category')->name('category');
-	Route::get('sanpham','ProductController@products')->name('products');
-	Route::get('tintuc','NewsController@news')->name('news');
-	Route::get('dondathang','OderController@oder')->name('oder');
+	Route::get('category','CategoryController@category')->name('category');  /*  danhmuc  */
+	Route::get('products','ProductController@products')->name('products');   /*  sanpham  */
+	Route::get('news','NewsController@news')->name('news');  /*  tintuc  */
+	Route::get('order','OderController@oder')->name('oder');  /*  dondathang  */
 	/*Quản lý danh mục*/
-	Route::group(['prefix'=>'danhmuc'],function(){
+	Route::group(['prefix'=>'category'],function(){
 		/*thêm danh mục*/
 		Route::get('add','CategoryController@getCategory')->name('add.category');
 		Route::post('add','CategoryController@postCategory');
@@ -52,46 +52,46 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function(){
 
 	/*Quản lý sản phẩm*/
 
-	Route::group(['prefix'=>'sanpham'],function(){
+	Route::group(['prefix'=>'products'],function(){
 		Route::get('all','ProductController@product')->name('product');
-		/*thêm sản phẩm*/
+		/*add product*/
 		Route::get('add','ProductController@getproduct')->name('add.product');
 		Route::post('add','ProductController@postproduct');
-		/*sửa sản phẩm*/
+		/*edit product*/
 
 		Route::get('edit/{id?}','ProductController@geteditproduct')->name('edit.product');
 		Route::post('edit/{id?}','ProductController@posteditproduct');
 
-		/*xóa sản phẩm*/
+		/* delete product */
 
 		Route::get('delete/{id?}','ProductController@deleteproduct')->name('delete.product');
 	});
 	/*quản lý đơn hàng*/
 
-	Route::group(['prefix'=>'dondathang'],function(){
+	Route::group(['prefix'=>'order'],function(){
 		Route::get('all','OderController@oder')->name('oder');
 		Route::get('view/{id?}','OderController@getdetail')->name('view.oder');
 		Route::post('view/{id?}','OderController@postdetail');
 		Route::get('delete/{id?}','OderController@delete')->name('del.oder');
 
-		Route::get('gui-mail-thong-bao','OderController@sendMailOder')->name('admin.email.sendMailOder');
+		Route::get('send-email','OderController@sendMailOder')->name('admin.email.sendMailOder');
 
 	});
 
 	/*Quản lý tin tức*/
 	/*quản lí khách hàng*/
-	Route::group(['prefix'=>'khachhang'],function(){
+	Route::group(['prefix'=>'client'],function(){
 		Route::get('all','UserController@user')->name('user');
 	});
 
 	/*Quản lí admin*/
 
-	Route::group(['prefix'=>'nhanvien'],function(){
-		Route::get('all','AdminUserController@nhanvien')->name('nhanvien');
+	Route::group(['prefix'=>'Staff'],function(){
+		Route::get('all','AdminUserController@nhanvien')->name('nhanvien');  // nhan vien
 	});
 
 	/*Quản lý kho*/
-	Route::group(['prefix'=>'khohang'],function(){
+	Route::group(['prefix'=>'warehouse'],function(){
 		Route::get('all','WarehouseController@khohang')->name('khohang');
 	});
 
@@ -109,9 +109,9 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function(){
 	    Route::get('/danh-sach-gio-hang','ShoppingcartController@getList')->name('listcart');
 	});
 
-	Route::group(['prefix'=>'gio-hang','middleware'=>'CheckLoginUser'],function(){
-		Route::get('dat-hang','ShoppingcartController@getCheckout')->name('checkout');
-		Route::post('dat-hang','ShoppingcartController@postCheckout')->name('post.checkout');
+	Route::group(['prefix'=>'cart','middleware'=>'CheckLoginUser'],function(){
+		Route::get('checkout','ShoppingcartController@getCheckout')->name('checkout');
+		Route::post('checkout','ShoppingcartController@postCheckout')->name('post.checkout');
 	});
 
 	/*đăng nhập /đăng ký admin*/
@@ -124,8 +124,8 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function(){
 
 	Route::group(['namespace'=>'Auth'],function(){
 		/*reset mat khau*/
-	Route::get('lay-lai-mat-khau','ForgotPasswordController@getFormResetPassword')->name('reset.password');
-	Route::post('lay-lai-mat-khau','ForgotPasswordController@sendCodeReset');
+	Route::get('reset-password','ForgotPasswordController@getFormResetPassword')->name('reset.password');
+	Route::post('reset-password','ForgotPasswordController@sendCodeReset');
 
 	Route::get('password/reset','ForgotPasswordController@resetPassword')->name('get.link.reset.password');
 	Route::post('password/reset','ForgotPasswordController@saveResetPassword');
@@ -136,8 +136,8 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function(){
 		Route::post('dang-nhap','LoginController@postLogin')->name('post.login');*/
 
 	});
-	Route::get('dang-xuat','PageController@getLogout')->name('logout');
+	Route::get('logout','PageController@getLogout')->name('logout');
 	/*comment*/
 	Route::post('comment/{id?}','CommentController@postComment');
 	/*...*/
-	Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+//	Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');

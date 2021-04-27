@@ -38,7 +38,7 @@ class PageController extends Controller
         $relatied =  Product::where('id_type',$productdetail->id_type)->get();
     	return view('page.productdetail',compact('productdetail','relatied','type_product'));
     }
-    
+
 
     public function getAbout(){
     	return view('page.about');
@@ -50,8 +50,8 @@ class PageController extends Controller
 
      public function getLogout(){
         Auth::logout();
-        return redirect(route('trangchu'));
+        return redirect(route('home'));
     }
 
-    
+
 }
