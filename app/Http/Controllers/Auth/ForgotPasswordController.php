@@ -27,7 +27,7 @@ class ForgotPasswordController extends Controller
             return redirect()->back()->with('danger','email này không tồn tại');
         }
 
-       
+
 
         $code=bcrypt(md5(time().$email));
         $checkUser->code=$code;
@@ -41,7 +41,7 @@ class ForgotPasswordController extends Controller
         Mail::send('email.reset_password',$data, function($message) use($checkUser){
             $message->to($checkUser->email, 'Visitor')->subject('Lấy lại mật khẩu');
         });
-        return redirect()->back()->with('success','Link khôi phục mật khẩu đã được gửi tới email của bạn') ; 
+        return redirect()->back()->with('success','Link khôi phục mật khẩu đã được gửi tới email của bạn') ;
 
 
     }
@@ -64,7 +64,7 @@ class ForgotPasswordController extends Controller
     }
 
     public function saveResetPassword(RequestResetPassword $requestResetPassword){
-        
+
         if($requestResetPassword->password)
         /*dd($requestResetPassword->all());*/
         {
@@ -87,4 +87,4 @@ class ForgotPasswordController extends Controller
         }
     }
 }
-    
+

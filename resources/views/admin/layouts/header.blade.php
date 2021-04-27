@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BAKERY : Trang quản trị - Dashboard</title>
+<title>BAKERY : Admin page - Dashboard</title>
 
 <link href="{!!url('back-end/css/bootstrap.min.css')!!}" rel="stylesheet">
 <link href="{!!url('back-end/css/datepicker3.css')!!}" rel="stylesheet">

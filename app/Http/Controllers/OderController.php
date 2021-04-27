@@ -34,23 +34,23 @@ class OderController extends Controller
         $checkUser= User::where('email',$email)->first();
 
         Mail::send('admin.email.sendMailOder', array('name'=>$oder->user["name"],'email'=>$oder->user["email"]),function($message) use($checkUser){
-            $message->to($checkUser->email, 'Visitor')->subject('Xác nhận đơn hàng!');
+            $message->to($checkUser->email, 'Visitor')->subject('Comment successful!');
         });
 
     	return redirect(route('oder'))
-      	->with(['flash_level'=>'result_msg','flash_massage'=>' Đã xác nhận đơn hàng thành công !']); 
+      	->with(['flash_level'=>'result_msg','flash_massage'=>' Order has been confirmed successfully !']);
     }
 
     public function delete($id){
     	$oder = Bill::where('id',$id)->first();
     	if ($oder->status ==1) {
     		return redirect()->back()
-    		->with(['flash_level'=>'result_msg','flash_massage'=>'Không thể hủy đơn hàng số: '.$id.' vì đã được xác nhận!']);
+    		->with(['flash_level'=>'result_msg','flash_massage'=>'Cannot cancel order number: '.$id.' vì đã được xác nhận!']);
     	} else {
     		$oder = Bill::find($id);
         	$oder->delete();
         	return redirect('admin/dondathang')
-         	->with(['flash_level'=>'result_msg','flash_massage'=>'Đã hủy bỏ đơn hàng số:  '.$id.' !']);
+         	->with(['flash_level'=>'result_msg','flash_massage'=>'Canceled order number:  '.$id.' !']);
      	}
     }
 }

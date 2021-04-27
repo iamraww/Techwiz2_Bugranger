@@ -1,20 +1,20 @@
 @extends('admin.layouts.master')
 @section('content')
 <!-- main content - noi dung chinh trong chu -->
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="{!!(url('/admin/home'))!!}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Tin tức</li>
+				<li class="active">News</li>
 			</ol>
 		</div><!--/.row-->
-	
+
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Danh sách tin bản tin
-						<a href="{!!url('admin/news/add')!!}" title=""><button type="button" class="btn btn-primary pull-right">Thêm tin mới</button></a>
+                        Newsletter list
+                            <a href="{!!url('admin/news/add')!!}" title=""><button type="button" class="btn btn-primary pull-right">Add new news</button></a>
 					</div>
 					@if (count($errors) > 0)
 					    <div class="alert alert-danger">
@@ -27,7 +27,7 @@
 					    @elseif (Session()->has('flash_level'))
 					    	<div class="alert alert-success">
 						        <ul>
-						            {!! Session::get('flash_massage') !!}	
+						            {!! Session::get('flash_massage') !!}
 						        </ul>
 						    </div>
 						@endif
@@ -35,12 +35,12 @@
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead>
-									<tr>										
-										<th>ID</th>										
-										<th>image</th>										
-										<th>Tiêu đề bản tin</th>										
-										<th>Tóm tắt</th>										
-										<th>Trạng thái</th>										
+									<tr>
+										<th>ID</th>
+										<th>image</th>
+										<th>Newsletter title</th>
+										<th>Summary</th>
+										<th>Status</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -51,26 +51,26 @@
 										<td></td>
 										<td><small></small></td>
 										<td style="width: 90px;">
-											
-											Hiển thị
-											
-											Tạm ẩn
-											
+
+                                            Display
+
+                                            Snooze
+
 										</td>
 										<td style="width: 120px;">
 										    <a href="" title="Sửa"><span class="glyphicon glyphicon-edit">edit</span> </a>
-										    <a href=""  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
+										    <a href=""  title="Xóa" onclick="return xacnhan('Delete this category ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 										</td>
-									</tr>	
-														
+									</tr>
+
 								</tbody>
 							</table>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->		
+		</div><!--/.row-->
 	</div>	<!--/.main-->
 <!-- =====================================main content - noi dung chinh trong chu -->
 @endsection

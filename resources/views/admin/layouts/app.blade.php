@@ -29,7 +29,7 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{ url('/') }}"> <span class="glyphicon glyphicon-chevron-left"></span> Quay về trang chủ </a>    
+                <a class="navbar-brand" href="{{ url('/') }}"> <span class="glyphicon glyphicon-chevron-left"></span> Return to home page </a>
             </div>
         </div>
     </nav>

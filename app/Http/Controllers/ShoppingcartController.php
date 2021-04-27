@@ -81,7 +81,7 @@ class ShoppingcartController extends Controller
             $message->to('Visitor', 'tranthanh72727@gmail.com')->subject('Có 1 đơn hàng mới!');
         });
         Cart::destroy();
-        return redirect()->back()->with('success','Bạn đã đặt hàng thành công , vui lòng chờ xử lí ! Kiểm tra trong hộp thư email của bạn');
+        return redirect()->back()->with('success','You have successfully ordered, please wait for the processing! Check in your email inbox');
     }
 
      public function deleteProduct($key){

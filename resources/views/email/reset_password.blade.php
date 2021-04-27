@@ -1,1 +1,1 @@
-<p>Cảm ơn bạn đã tin dùng các sản phẩm của chúng tôi . Click <a href="{{$route}}">Vào đây</a> để lấy lại mật khẩu</p>
+<p>Thank you for your trust in our products . Click <a href="{{$route}}">Come in</a> to get your password back</p>

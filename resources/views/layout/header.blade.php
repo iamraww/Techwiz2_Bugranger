@@ -136,15 +136,13 @@
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('listcart')}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Xem giỏ hàng
-									</a>
+                                        View cart									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
 									<a style="text-decoration: none" href="{{route('checkout')}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Thanh toán
-									</a>
+                                        Pay									</a>
 								</div>
 							</div>
 						</div>

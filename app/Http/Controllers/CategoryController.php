@@ -21,7 +21,7 @@ class CategoryController extends Controller
 
     	$data = $req->except('_token');
     	ProductType::insert($data);
-    	return redirect(route('category'))->with('success','Thêm một danh mục thành công');
+    	return redirect(route('category'))->with('success','Add a category successfully');
     }
 
    /* sửa danh mục*/
@@ -38,13 +38,13 @@ class CategoryController extends Controller
    				'name'=>'required|min:3'
    			],
    			[
-   				'name.required'=>'Tên danh mục không được bỏ trống',
-   				'name.min'=>'Tên danh mục không được nhỏ hơn 3 ký tự'
+   				'name.required'=>'Category name cannot be left blank',
+   				'name.min'=>'Category name must not be less than 3 characters'
    			]);
 
    		$add->name= $req->name;
    		$add->save();
-    	return redirect(route('category'))->with('success','Cập nhật danh mục thành công');
+    	return redirect(route('category'))->with('success','Successful catalog update');
    	}
 
    	/*xóa danh mục*/
@@ -52,6 +52,6 @@ class CategoryController extends Controller
    	public function delete($id){
    		$delete = ProductType::find($id);
         $delete->delete();
-        return redirect()->back()->with('success','Xóa Danh Mục thành công');
+        return redirect()->back()->with('success','Successful catalog update');
    	}
 }

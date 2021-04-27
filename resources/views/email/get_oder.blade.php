@@ -1,1 +1,1 @@
-<p>Có một đơn hàng mới cần được xử lí</p>
+<p>There is a new order that needs to be processed</p>
