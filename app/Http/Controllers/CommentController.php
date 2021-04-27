@@ -8,7 +8,7 @@ use Auth;
 
 class CommentController extends Controller
 {
-	
+
 
     public function postComment(Request $req,$id){
     	$productdetail = $id;
@@ -19,6 +19,6 @@ class CommentController extends Controller
     	$comment->content=$req->content;
     	$comment->date_comment=date('Y-m-d');
     	$comment->save();
-    	return redirect()->back()->with('success','Bình luận thành công');
+    	return redirect()->back()->with('success','Comment success');
     }
 }

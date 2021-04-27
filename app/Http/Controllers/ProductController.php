@@ -16,12 +16,12 @@ class ProductController extends Controller
 
     public function getproduct (){
     	$cate = ProductType::all();
-    	
+
     	return view('admin.products.add',compact('cate'));
     }
 
     public function postproduct(Request $req){
-    	
+
     	$product = new Product();
     	$this->validate($req,
     		[
@@ -40,13 +40,13 @@ class ProductController extends Controller
     	$product->description= $req->txtReview;
     	$product->id_type= $req->soidtu;
     	$product->status= $req->status;
-        
+
     	if ($req->hasFile('image')) {
             $file=$req->file('image');
             $duoi=$file->getClientOriginalExtension();
             if($duoi !='jpg' && $duoi !='png' && $duoi !='jpeg')
             {
-                return redirect()->back()->with('danger','Định dạng hình ảnh không hợp lệ');
+                return redirect()->back()->with('danger','Invalid picture format ');
             }
             $name=$file->getClientOriginalName();
             $image=str_random(4)."_".$name;
@@ -57,14 +57,14 @@ class ProductController extends Controller
             }
             $file->move("frontend/image/product" ,$image);
             $product->image=$image;
-         } 
+         }
          else{
             $product->image="";
          }
 
          $product->save();
 
-         return redirect()->back()->with('success','Thêm một sản phẩm mới thành công');
+         return redirect()->back()->with('success','Add a new product successfully ');
 
     }
 
@@ -90,7 +90,7 @@ class ProductController extends Controller
             $duoi=$file->getClientOriginalExtension();
             if($duoi !='jpg' && $duoi !='png' && $duoi !='jpeg')
             {
-                return redirect()->back()->with('danger','Định dạng hình ảnh không hợp lệ');
+                return redirect()->back()->with('danger','Invalid picture format');
             }
             $name=$file->getClientOriginalName();
             $image=str_random(4)."_".$name;
@@ -101,14 +101,14 @@ class ProductController extends Controller
             }
             $file->move("frontend/image/product" ,$image);
             $editproduct->image=$image;
-         } 
+         }
          else{
             $editproduct->image="";
          }
 
          $editproduct->save();
 
-         return redirect()->back()->with('success','Sửa sản phẩm mới thành công');
+         return redirect()->back()->with('success','New product repair successfully ');
     }
 
 
@@ -116,6 +116,6 @@ class ProductController extends Controller
     	$del=Product::find($id);
     	$del->delete();
 
-    	return redirect()->back()->with('success','Xóa sản phẩm thành công');
+    	return redirect()->back()->with('success','Product deleted successfully');
     }
 }

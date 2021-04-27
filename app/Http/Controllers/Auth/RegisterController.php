@@ -58,19 +58,19 @@ class RegisterController extends Controller
         ],
         [
 
-            'name.required' => 'Hãy nhập vào họ tên của bạn',
-            'name.max' => 'Họ tên tối đa 255 ký tự',
-            'email.required' => 'Hãy nhập vào địa chỉ Email',
-            'email.email' => 'Địa chỉ Email không đúng định dạng',
-            'email.max' => 'Địa chỉ Email tối đa 255 ký tự',
-            'email.unique' => 'Địa chỉ Email đã tồn tại',
-            'password.required' => 'Hãy nhập mật khẩu',
-            'password.min' => 'Mật khẩu tối thiểu 6 ký tự',
-            'password.confirmed' => 'Xác nhận mật khẩu không đúng',
-            'phone.required' => 'Hãy nhập số điện thoại',
-            'phone.max' => 'Số điện thoại tối đa 14 ký tự',
-            'address.required' => 'Hãy nhập vào địa chỉ của bạn',
-            'address.max' => 'Địa chỉ được phép nhập tối đa 255 ký tự',
+            'name.required' => 'Please enter your full name',
+            'name.max' => 'Full name up to 255 characters',
+            'email.required' => 'Please enter Email address',
+            'email.email' => 'Email address is not correct',
+            'email.max' => 'Email address up to 255 characters',
+            'email.unique' => 'Email address already exists',
+            'password.required' => 'Please enter password',
+            'password.min' => 'Minimum 6-character password',
+            'password.confirmed' => 'Confirm incorrect password',
+            'phone.required' => 'Please enter phone number',
+            'phone.max' => 'Phone number up to 14 characters',
+            'address.required' => 'Please enter your address',
+            'address.max' => 'The address is allowed to enter up to 255 characters',
 
         ]);
     }
@@ -83,7 +83,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

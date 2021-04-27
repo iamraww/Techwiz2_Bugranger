@@ -5,7 +5,7 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Sản phẩm</li>
+				<li class="active">Product</li>
 			</ol>
 		</div><!--/.row-->
 		<div class="row">
@@ -14,10 +14,10 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-md-10"><div class="form-group">
-								<label for="inputLoai" class="col-sm-3 control-label"><strong> Danh sách sản phẩm </strong></label>
+								<label for="inputLoai" class="col-sm-3 control-label"><strong> List of products </strong></label>
 								<div class="col-md-6">
 									<select name="sltCate" id="inputLoai" class="form-control">
-						      			<option value="0">- Chọn sản phẩm theo danh mục --</option>
+						      			<option value="0">- Select products by category --</option>
 
 						      		</select>
 									<script>
@@ -29,7 +29,7 @@
 									</script>
 								</div>
 								<div class="col-md-3">
-									<input type="search" name="txttk" id="inputTxttk" class="form-control" value="" placeholder="Tìm sản phẩm..." required="required" title="">
+									<input type="search" name="txttk" id="inputTxttk" class="form-control" value="" placeholder="Search..." required="required" title="">
 								</div>
 							</div>
 
@@ -37,7 +37,7 @@
 							</div>
 							<div class="col-md-2">
 
-									<a href="{{route('add.product')}}" title=""><button type="button" class="btn btn-primary pull-right">Thêm Mới Sản Phẩm</button></a>
+									<a href="{{route('add.product')}}" title=""><button type="button" class="btn btn-primary pull-right">Add Product</button></a>
 
 							</div>
 						</div>
@@ -63,14 +63,14 @@
 							<table class="table table-hover">
 								<thead>
 									<tr>
-										<th>#</th>
-										<th>Hình ảnh</th>
-										<th>Tên sản phẩm</th>
-										<th>Tóm tắt chức năng</th>
-										<th>Thương hiệu</th>
-										<th>Giá bán</th>
-										<th>Trạng thái</th>
-										<th>Action</th>
+                                        <th> # </th>
+                                        <th> Image </th>
+                                        <th> Product name </th>
+                                        <th> Function Summary </th>
+                                        <th> Trademarks </th>
+                                        <th> Selling price </th>
+                                        <th> Status </th>
+                                        <th> Action </th>
 									</tr>
 								</thead>
 								<tbody>
@@ -84,14 +84,14 @@
 											<td>{{number_format($pr->unit_price)}} USD</td>
 											<td>
 												@if($pr->status !=0)
-													<span style="color:blue;">Còn hàng</span>
+													<span style="color:blue;">Stocking</span>
 												@else
-													Tạm hết hàng
+                                                    Temporarily out of stock
 												@endif
 											</td>
 											<td>
 											    <a href="{{route('edit.product',$pr->id)}}" title="Sửa"><span class="glyphicon glyphicon-edit">edit</span> </a>
-											    <a href="{{route('delete.product',$pr->id)}}"  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
+											    <a href="{{route('delete.product',$pr->id)}}"  title="Xóa" onclick="return xacnhan('Delete this category ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 											</td>
 										</tr>
 									@endforeach

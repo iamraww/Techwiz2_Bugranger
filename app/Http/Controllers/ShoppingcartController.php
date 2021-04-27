@@ -78,10 +78,10 @@ class ShoppingcartController extends Controller
         $email= $req->email;
         $checkUser= User::where('email',$email)->first();
         Mail::send('email.get_oder', array('name'=>$req->name,'email'=>$req->email),function($message) use($checkUser){
-            $message->to('Visitor', 'tranthanh72727@gmail.com')->subject('Có 1 đơn hàng mới!');
+            $message->to('Visitor', 'tranthanh72727@gmail.com')->subject('There is 1 new order!');
         });
         Cart::destroy();
-        return redirect()->back()->with('success','Bạn đã đặt hàng thành công , vui lòng chờ xử lí ! Kiểm tra trong hộp thư email của bạn');
+        return redirect()->back()->with('success','You have successfully ordered, please wait for the processing! Check in your email inbox');
     }
 
      public function deleteProduct($key){

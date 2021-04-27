@@ -5,24 +5,24 @@
 		<table class="table table-bordered table-hover text-center">
 			<thead>
 				<tr>
-					<th colspan="2">Thông tin nhân viên</th>										
+					<th colspan="2">Staff information</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Họ tên</td>
+					<td>Full name</td>
 					<td>{!!Auth::guard('admin')->user()->name !!}</td>
 				</tr>
 				<tr>
-					<td>Địa chỉ E-mail</td>
+					<td>E-mail</td>
 					<td>{!!Auth::guard('admin')->user()->email !!}</td>
 				</tr>
 				<tr>
-					<td>Quyền hạn</td>
+					<td>Permission</td>
 					<td>{!!Auth::guard('admin')->user()->level !!}</td>
 				</tr>
 				<tr>
-					<td>Ngày đăng ký</td>
+					<td>Registration Date</td>
 					<td>{!!Auth::guard('admin')->user()->created_at !!}</td>
 				</tr>
 			</tbody>

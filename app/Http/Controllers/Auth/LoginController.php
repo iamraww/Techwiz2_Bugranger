@@ -45,12 +45,12 @@ class LoginController extends Controller
             'password' => 'required|min:6|confirmed',
         ],
         [
-            'email.required' => 'Hãy nhập vào địa chỉ Email',
-            'email.email' => 'Địa chỉ Email không đúng định dạng',
-            'email.max' => 'Địa chỉ Email tối đa 255 ký tự',
-            'email.unique' => 'Địa chỉ Email đã tồn tại',
-            'password.required' => 'Hãy nhập mật khẩu',
-            'password.min' => 'Mật khẩu tối thiểu 6 ký tự',
+            'email.required' => 'Please enter Email',
+            'email.email' => 'Email address is not properly formatted ',
+            'email.max' => 'Email address up to 255 charactersd',
+            'email.unique' => 'Email address already exists ',
+            'password.required' => 'Please enter the password ',
+            'password.min' => 'Password at least 6 characters ',
 
         ]);
     }

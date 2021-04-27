@@ -24,10 +24,10 @@ class ForgotPasswordController extends Controller
 
         if(!$checkUser)
         {
-            return redirect()->back()->with('danger','email này không tồn tại');
+            return redirect()->back()->with('danger','Email not found');
         }
 
-       
+
 
         $code=bcrypt(md5(time().$email));
         $checkUser->code=$code;
@@ -39,9 +39,9 @@ class ForgotPasswordController extends Controller
             'route'=>$url
         ];
         Mail::send('email.reset_password',$data, function($message) use($checkUser){
-            $message->to($checkUser->email, 'Visitor')->subject('Lấy lại mật khẩu');
+            $message->to($checkUser->email, 'Visitor')->subject('Reset Password');
         });
-        return redirect()->back()->with('success','Link khôi phục mật khẩu đã được gửi tới email của bạn') ; 
+        return redirect()->back()->with('success','Done') ;
 
 
     }
@@ -64,7 +64,7 @@ class ForgotPasswordController extends Controller
     }
 
     public function saveResetPassword(RequestResetPassword $requestResetPassword){
-        
+
         if($requestResetPassword->password)
         /*dd($requestResetPassword->all());*/
         {
@@ -78,13 +78,13 @@ class ForgotPasswordController extends Controller
 
             if(!$checkUser)
             {
-                return redirect()->back()->with('danger','Xin lỗi ! đường dẫn lấy lại mật khẩu không đúng , bạn vui lòng thử lại sau');
+                return redirect()->back()->with('danger','Error');
             }
             $checkUser->password=bcrypt($requestResetPassword->password);
 
             $checkUser->save();
-            return redirect(route('login'))->with('success','Mật khẩu đã được đổi thành công,mời bạn đăng nhập');
+            return redirect(route('login'))->with('success','Done');
         }
     }
 }
-    
+

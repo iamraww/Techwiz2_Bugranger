@@ -5,7 +5,7 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Chi tiết đơn hàng </li>
+				<li class="active">Order details</li>
 			</ol>
 		</div><!--/.row-->
 		<div class="row">
@@ -38,14 +38,14 @@
 								<table class="table table-hover">
 									<thead>
 										<tr>
-											<th>ID</th>
-											<th> Họ-tên khách hàng</th>
-											<th>Địa chỉ</th>
-											<th>Điện thoại</th>
-											<th>Email</th>
-											<th>Ngày đặt</th>
-											<th>Tổng tiền</th>
-										</tr>
+                                            <th> ID </th>
+                                            <th> Customer's full name </th>
+                                            <th> Address </th>
+                                            <th> Phone </th>
+                                            <th> Email </th>
+                                            <th> Date set </th>
+                                            <th> Total amount </th>
+                                        </tr>
 									</thead>
 									<tbody>
 										<tr>
@@ -61,21 +61,21 @@
 								</table>
 							</div>
 						<div class="panel-heading">
-							Chi tiết sản phẩm trong đơn đặt hàng
+                            Product details in the order
 						</div>
 						<div class="panel-body" style="font-size: 12px;">
 							<div class="table-responsive">
 								<table class="table table-hover">
 									<thead>
 										<tr>
-											<th>ID</th>
-											<th>Hình ảnh</th>
-											<th>Tên sản phẩm</th>
-											<th>Giá bán</th>
-											<th>Số lượng </th>
-											<th>Thành tiền</th>
-											<th>Trạng thái</th>
-											<th>Action</th>
+                                            <th> ID </th>
+                                            <th> Image </th>
+                                            <th> Product name </th>
+                                            <th> Selling price </th>
+                                            <th> Quantity </th>
+                                            <th> Amount </th>
+                                            <th> Status </th>
+                                            <th> Action </th>
 										</tr>
 									</thead>
 									<tbody>
@@ -89,13 +89,13 @@
 												<td>{{number_format($row->unit_price * $row->quantity )}} USD</td>
 												<td>
 													@if($row->bill->status==0)
-														<span style="color:blue;">Tạm hết</span>
+														<span style="color:blue;">All right</span>
 													@else
-														<span style="color:#27ae60;">Còn hàng</span>
+														<span style="color:#27ae60;">Stocking</span>
 													@endif
 												</td>
 												<td>
-												    <a href=""  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
+												    <a href=""  title="Xóa" onclick="return xacnhan('Delete this category ?')"><span class="glyphicon glyphicon-remove">remove</span> </a>
 												</td>
 											</tr>
 										@endforeach

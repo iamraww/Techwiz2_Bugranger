@@ -5,13 +5,13 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Dơn đặt hàng</li>
+				<li class="active">Orders</li>
 			</ol>
 		</div><!--/.row-->
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel-heading">
-					Danh sách đơn đặt hàng
+					List Orders
 				</div>
 				<div class="panel panel-default">
 					@if (count($errors) > 0)
@@ -34,15 +34,15 @@
 							<table class="table table-hover">
 								<thead>
 									<tr>
-										<th>#</th>
-										<th>Tên khách hàng</th>
-										<th>Địa chỉ giao hàng</th>
-										<th>Điện thoại</th>
-										<th>Email</th>
-										<th>Ngày đặt</th>
-										<th>Thành tiền</th>
-										<th>Trạng thái</th>
-										<th>Action</th>
+                                        <th> # </th>
+                                        <th> Client name </th>
+                                        <th> Shipping Address </th>
+                                        <th> Phone </th>
+                                        <th> Email </th>
+                                        <th> Date set </th>
+                                        <th> Amount </th>
+                                        <th> Status </th>
+                                        <th> Action </th>
 									</tr>
 								</thead>
 								<tbody>
@@ -58,14 +58,14 @@
 											<td>{{number_format($oder->total)}} USD</td>
 											<td>
 												@if($oder->status ==0)
-													<span style="color:#d35400;">Chưa xác nhận</span>
+													<span style="color:#d35400;">Unconfimred</span>
 												@else
-													<span style="color:#27ae60;"> Đã xác nhận</span>
+													<span style="color:#27ae60;">Confirmed</span>
 												@endif
 											</td>
 											<td>
-											    <a class="btn_customer_action " data-id="{{$oder->id}}" href="{{route('view.oder',$oder->id)}}" title="Chi tiết">Chi tiết </a> &nbsp;
-											    <a href="{{route('del.oder',$oder->id)}}"  title="Xóa" onclick="return xacnhan('Xóa danh mục này ?')"> Hủy bỏ</a>
+											    <a class="btn_customer_action " data-id="{{$oder->id}}" href="{{route('view.oder',$oder->id)}}" title="Chi tiết">Detail </a> &nbsp;
+											    <a href="{{route('del.oder',$oder->id)}}"  title="Xóa" onclick="return xacnhan('Delete this category ?')"> Cancel</a>
 											</td>
 										</tr>
 									@endforeach
@@ -86,7 +86,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Chi tiết đơn hàng #<b class="oder_id"></b></h4>
+					<h4 class="modal-title">Order details #<b class="oder_id"></b></h4>
 				</div>
 				<div class="modal-body" id="md_content">
 
